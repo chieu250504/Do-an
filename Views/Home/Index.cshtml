@@ -1,0 +1,112 @@
+﻿@model Nettruyen.Controllers.HomeViewModel
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- 🔥 Top truyện -->
+<aside class="sidebar">
+    <h2>🔥 Truyện đề cử</h2>
+
+    <div class="carousel-container">
+        <button class="carousel-btn left-btn">❮</button>
+        <ul class="top-list" id="topList">
+            @foreach (var story in Model.TopStories)
+            {
+                var latestChapter = story.LatestChapters.FirstOrDefault();
+                <li class="top-item">
+                    <img src="~/Image/Cover/story1.jpg" />
+                    <div>
+                        <h4>@story.Title</h4>
+                        @if (latestChapter != null)
+                        {
+                            <p>Chapter @latestChapter.ChapterNumber • @latestChapter.PublishedAt.ToString("dd/MM/yyyy")</p>
+                        }
+                    </div>
+                </li>
+            }
+        </ul>
+        <button class="carousel-btn right-btn">❯</button>
+    </div>
+</aside>
+
+<div class="content">
+  
+    <section class="main-content">
+        <h2>📚 Truyện mới cập nhật</h2>
+        <div class="story-grid">
+            @foreach (var story in Model.LatestStories)
+            {
+                <div class="story-card">
+                    <div class="story-thumb">
+                        <img src="~/Image/Cover/story1.jpg" alt="@story.Title" />
+                        <div class="overlay"></div>
+                        <div class="views">👁️ @story.Views lượt xem</div>
+                    </div>
+
+                    <h3>@story.Title</h3>
+
+                    <div class="chapters">
+                        @foreach (var c in story.LatestChapters)
+                        {
+                            <p>
+                                Chapter   @c.ChapterNumber
+                                <span>(@c.PublishedAt.ToString("dd/MM/yyyy"))</span>
+                            </p>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+    
+    <aside class="ranking-sidebar">
+        
+        <div class="ranking-section">
+            <h3 class="ranking-title">Bảng xếp hạng</h3>
+
+            <div class="ranking-tabs">
+                <label>
+                    <input type="radio" name="rankingFilter" value="day" checked>
+                    <span>Ngày</span>
+                </label>
+                <label>
+                    <input type="radio" name="rankingFilter" value="week">
+                    <span>Tuần</span>
+                </label>
+                <label>
+                    <input type="radio" name="rankingFilter" value="month">
+                    <span>Tháng</span>
+                </label>
+            </div>
+
+         
+            <ul class="ranking-list ranking-day active">
+                @{
+                    int rank = 1;
+                }
+                @foreach (var story in Model.TopStories)
+                {
+                    var latestChapter = story.LatestChapters.FirstOrDefault();
+                    <li class="ranking-item">
+                        <div class="ranking-rank @(rank == 1 ? "rank-1" : rank == 2 ? "rank-2" : rank == 3 ? "rank-3" : "")">
+                            @rank
+                        </div>
+                        <img src="~/Image/Cover/story1.jpg" alt="@story.Title" class="ranking-thumb" />
+                        <div class="ranking-info">
+                            <h4 class="ranking-name">@story.Title</h4>
+                            @if (latestChapter != null)
+                            {
+                                <p class="ranking-chapter">
+                                    Chapter @latestChapter.ChapterNumber 👁️ @story.Views
+                                </p>
+                            }
+                        </div>
+                    </li>
+                    rank++;
+                }
+            </ul>
+        </div>
+    </aside>
+</div>

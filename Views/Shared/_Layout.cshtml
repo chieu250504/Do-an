@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/style.css" />
+    <script src="~/Content/Script.js" defer></script>
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo-link">
+                <img src="~/Image/Icon/Logo.png" alt="NetTruyen Logo" class="logo-img">
+            </a>
+
+            <div class="search-bar-wrapper">
+                <input type="text" placeholder="Tìm truyện..." class="search-input">
+                <button class="search-button" aria-label="Tìm kiếm">
+                    <img src="~/Image/Icon/search.png" alt="Icon tìm kiếm" class="header-icon-img">
+                </button>
+            </div>
+
+            <div class="header-icons">
+                <a href="#" class="icon-link" aria-label="đèn" id="theme-toggle">
+                    <img src="~/Image/Icon/light.png" alt="đèn" class="header-icon-img" id="light-toggle-icon">
+                </a>
+                <a href="#" class="icon-link" aria-label="Tin nhắn">
+                    <img src="~/Image/Icon/messenger.png" alt="Icon Tin nhắn" class="header-icon-img">
+                </a>
+                <div class="account-dropdown">
+                    <a href="#" class="icon-link" aria-label="Tài khoản">
+                        <img src="~/Image/Icon/user.png" alt="Icon Tài khoản" class="header-icon-img user-icon">
+                        <span>Tài khoản</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#"><img src="~/Image/Icon/user.png" alt="Icon Tài khoản" class="header-icon-img user-icon">Đăng nhập</a>
+                        <a href="#"><img src="~/Image/Icon/user.png" alt="Icon Tài khoản" class="header-icon-img user-icon">Đăng ký</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <ul>
+                <li><a href="#"><img src="~/Image/Icon/home.png" alt="Icon Tài khoản" class="header-icon-img user-icon"></a></li>
+                <li><a href="#">HOT</a></li>
+                <li><a href="#">THEO DÕI</a></li>
+                <li><a href="#">LỊCH SỬ</a></li>
+                <li class="nav-has-submenu">
+                    <a href="#">THỂ LOẠI <span class="arrow-down">▼</span></a>
+                    <div class="nav-submenu">
+                        <ul>
+                            <li><a href="#">Hành động</a></li>
+                            <li><a href="#">Tình cảm</a></li>
+                            <li><a href="#">Hài hước</a></li>
+                            <li><a href="#">Phiêu lưu</a></li>
+                            <li><a href="#">Kinh dị</a></li>
+                            <li><a href="#">Trinh thám</a></li>
+                            <li><a href="#">Học đường</a></li>
+                            <li><a href="#">Viễn tưởng</a></li>
+                            <li><a href="#">Thể thao</a></li>
+                            <li><a href="#">Xuyên không</a></li>
+                            <li><a href="#">Manhwa</a></li>
+                            <li><a href="#">Manhua</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">TÌM TRUYỆN</a></li>
+                <li><a href="#">MANHUA</a></li>
+                <li><a href="#">MANHWA</a></li>
+                <li><a href="#">NGÔN TÌNH</a></li>
+                <li><a href="#">CON GÁI</a></li>
+                <li><a href="#">CON TRAI</a></li>
+                <li><a href="#">BLOG</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="main-container">
+        @RenderBody()
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col footer-col-info">
+                <a href="#" class="logo-link">
+                    <img src="~/Image/Icon/Logo.png" alt="NetTruyen Logo" class="logo-img">
+                </a>
+                <div class="footer-links-group">
+                    <a href="#">Giới thiệu</a> | <a href="#">Liên hệ</a>
+                </div>
+                <div class="footer-links-group">
+                    <a href="#">Điều khoản</a> | <a href="#">Chính sách Bảo mật</a>
+                </div>
+                <div class="footer-contact">
+                    <p><strong>Liên hệ đặt quảng cáo</strong></p>
+                    <p>Email: <a href="mailto:ads@nettruyen.com">ads@nettruyen.com</a></p>
+                </div>
+                <p class="copyright">Copyright © 2025 NetTruyen</p>
+            </div>
+
+            <div class="footer-col footer-col-menu">
+                <div class="tag-group">
+                    <a href="#">Truyện tranh</a>
+                    <a href="#">NetTruyen</a>
+                    <a href="#">Truyện tranh online</a>
+                    <a href="#">Đọc truyện tranh online</a>
+                    <a href="#">Truyện Tranh Đam Mỹ</a>
+                    <a href="#">Truyện Tranh Ngôn Tình</a>
+                    <a href="#">VietTruyen Ngôn Tình</a>
+                    <a href="#">Manhwa</a>
+                    <a href="#">Manhua</a>
+                    <a href="#">VNtruyen.com</a>
+                    <a href="#">animevietsub</a>
+                    <a href="#">truyện con gái</a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-col-disclaimer">
+                <h4>Miễn trừ trách nhiệm</h4>
+                <p class="disclaimer-text">
+                    Trang web của chúng tôi cung cấp truyện tranh từ nhiều nguồn khác nhau với mục đích chia sẻ và giải trí. Chúng tôi không sở hữu hoặc đảm bảo bản quyền của các tác phẩm được đăng tải. Nếu bạn là chủ sở hữu bản quyền và cho rằng nội dung vi phạm quyền lợi của mình, vui lòng liên hệ để chúng tôi gỡ bỏ ngay lập tức.
+                </p>
+                <p class="disclaimer-text">
+                    Ngoài ra, chúng tôi không chịu trách nhiệm về bất kỳ quảng cáo nào được hiển thị trên trang. Các quảng cáo này do bên thứ ba cung cấp và chúng tôi không kiểm soát nội dung, chất lượng hay tính xác thực của sản phẩm, dịch vụ được quảng cáo. Người dùng cần tự đánh giá và chịu trách nhiệm khi quyết định tương tác với các quảng cáo đó.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
