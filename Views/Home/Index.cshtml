@@ -1,9 +1,13 @@
 ﻿@model Nettruyen.Controllers.HomeViewModel
+@using PagedList
+@using PagedList.Mvc
 @{
     ViewBag.Title = "Trang chủ";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
 
+}
+@using PagedList
+@using PagedList.Mvc
 <!-- 🔥 Top truyện -->
 <aside class="sidebar">
     <h2>🔥 Truyện đề cử</h2>
@@ -15,14 +19,16 @@
             {
                 var latestChapter = story.LatestChapters.FirstOrDefault();
                 <li class="top-item">
-                    <img src="~/Image/Cover/story1.jpg" />
-                    <div>
-                        <h4>@story.Title</h4>
-                        @if (latestChapter != null)
-                        {
-                            <p>Chapter @latestChapter.ChapterNumber • @latestChapter.PublishedAt.ToString("dd/MM/yyyy")</p>
-                        }
-                    </div>
+                    <a href="@Url.Action("Detail", "Story", new { id = story.StoryID })">
+                        <img src="@Url.Content(story.CoverImage)" alt="@story.Title" />
+                        <div>
+                            <h4>@story.Title</h4>
+                            @if (latestChapter != null)
+                            {
+                                <p>Chapter @latestChapter.ChapterNumber • @latestChapter.PublishedAt.ToString("dd/MM/yyyy")</p>
+                            }
+                        </div>
+                    </a>
                 </li>
             }
         </ul>
@@ -31,41 +37,47 @@
 </aside>
 
 <div class="content">
-  
+
     <section class="main-content">
         <h2>📚 Truyện mới cập nhật</h2>
         <div class="story-grid">
             @foreach (var story in Model.LatestStories)
             {
                 <div class="story-card">
-                    <div class="story-thumb">
-                        <img src="~/Image/Cover/story1.jpg" alt="@story.Title" />
-                        <div class="overlay"></div>
-                        <div class="views">👁️ @story.Views lượt xem</div>
-                    </div>
-
+                    <a href="@Url.Action("Detail", "Story", new { id = story.StoryID })">
+                        <div class="story-thumb">
+                            <img src="@Url.Content(story.CoverImage)" alt="@story.Title" />
+                            <div class="overlay"></div>
+                            <div class="views">👁️ @story.Views lượt xem</div>
+                        </div>
+                    </a>
                     <h3>@story.Title</h3>
 
                     <div class="chapters">
                         @foreach (var c in story.LatestChapters)
                         {
                             <p>
-                                Chapter   @c.ChapterNumber
-                                <span>(@c.PublishedAt.ToString("dd/MM/yyyy"))</span>
+                                <a href="@Url.Action("Chapter", "Read", new { id = c.ChapterID })">
+                                    Chapter @c.ChapterNumber
+                                </a>
+                                <span>@Nettruyen.Controllers.TimeHelper.GetRelativeTime(c.PublishedAt)</span>
                             </p>
                         }
                     </div>
                 </div>
             }
         </div>
+        <div class="pagination">
+            @Html.PagedListPager(Model.LatestStories, page => Url.Action("Index", new { page }))
+        </div>
     </section>
 
-    
+
     <aside class="ranking-sidebar">
-        
         <div class="ranking-section">
             <h3 class="ranking-title">Bảng xếp hạng</h3>
 
+           
             <div class="ranking-tabs">
                 <label>
                     <input type="radio" name="rankingFilter" value="day" checked>
@@ -81,32 +93,87 @@
                 </label>
             </div>
 
-         
+            
             <ul class="ranking-list ranking-day active">
                 @{
                     int rank = 1;
                 }
                 @foreach (var story in Model.TopStories)
                 {
-                    var latestChapter = story.LatestChapters.FirstOrDefault();
+                    var latestChapter = story.LatestChapters?.FirstOrDefault();
                     <li class="ranking-item">
-                        <div class="ranking-rank @(rank == 1 ? "rank-1" : rank == 2 ? "rank-2" : rank == 3 ? "rank-3" : "")">
-                            @rank
-                        </div>
-                        <img src="~/Image/Cover/story1.jpg" alt="@story.Title" class="ranking-thumb" />
-                        <div class="ranking-info">
-                            <h4 class="ranking-name">@story.Title</h4>
-                            @if (latestChapter != null)
-                            {
-                                <p class="ranking-chapter">
-                                    Chapter @latestChapter.ChapterNumber 👁️ @story.Views
-                                </p>
-                            }
-                        </div>
+                        <div class="ranking-rank @(rank == 1 ? "rank-1" : rank == 2 ? "rank-2" : rank == 3 ? "rank-3" : "")">@rank</div>
+                        <a href="@Url.Action("Detail", "Story", new { id = story.StoryID })" class="ranking-link">
+                            <img src="@Url.Content(story.CoverImage)" alt="@story.Title" class="ranking-thumb" />
+                            <div class="ranking-info">
+                                <h4 class="ranking-name">@story.Title</h4>
+                                @if (latestChapter != null)
+                                {
+                                    <p class="ranking-chapter">
+                                        Chapter @latestChapter.ChapterNumber 👁️ @story.Views
+                                    </p>
+                                }
+                            </div>
+                        </a>
                     </li>
                     rank++;
                 }
             </ul>
+
+            
+            <ul class="ranking-list ranking-week" style="display:none;">
+                @{
+                    int rankW = 1;
+                }
+                @foreach (var story in Model.TopStories)
+                {
+                    var latestChapter = story.LatestChapters?.FirstOrDefault();
+                    <li class="ranking-item">
+                        <div class="ranking-rank @(rankW == 1 ? "rank-1" : rankW == 2 ? "rank-2" : rankW == 3 ? "rank-3" : "")">@rankW</div>
+                        <a href="@Url.Action("Detail", "Story", new { id = story.StoryID })" class="ranking-link">
+                            <img src="@Url.Content(story.CoverImage)" alt="@story.Title" class="ranking-thumb" />
+                            <div class="ranking-info">
+                                <h4 class="ranking-name">@story.Title</h4>
+                                @if (latestChapter != null)
+                                {
+                                    <p class="ranking-chapter">
+                                        Chapter @latestChapter.ChapterNumber 👁️ @story.Views
+                                    </p>
+                                }
+                            </div>
+                        </a>
+                    </li>
+                    rankW++;
+                }
+            </ul>
+
+            
+            <ul class="ranking-list ranking-month" style="display:none;">
+                @{
+                    int rankM = 1;
+                }
+                @foreach (var story in Model.TopStories)
+                {
+                    var latestChapter = story.LatestChapters?.FirstOrDefault();
+                    <li class="ranking-item">
+                        <div class="ranking-rank @(rankM == 1 ? "rank-1" : rankM == 2 ? "rank-2" : rankM == 3 ? "rank-3" : "")">@rankM</div>
+                        <a href="@Url.Action("Detail", "Story", new { id = story.StoryID })" class="ranking-link">
+                            <img src="@Url.Content(story.CoverImage)" alt="@story.Title" class="ranking-thumb" />
+                            <div class="ranking-info">
+                                <h4 class="ranking-name">@story.Title</h4>
+                                @if (latestChapter != null)
+                                {
+                                    <p class="ranking-chapter">
+                                        Chapter @latestChapter.ChapterNumber 👁️ @story.Views
+                                    </p>
+                                }
+                            </div>
+                        </a>
+                    </li>
+                    rankM++;
+                }
+            </ul>
         </div>
     </aside>
+
 </div>

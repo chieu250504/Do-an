@@ -53,6 +53,12 @@
       <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -127,7 +133,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReadController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\StoryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,14 +185,48 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\Script.js" />
     <Content Include="Content\Style.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\ChapterImage\image1.jpg" />
+    <Content Include="Image\ChapterImage\image10.jpg" />
+    <Content Include="Image\ChapterImage\image2.jpg" />
+    <Content Include="Image\ChapterImage\image3.jpg" />
+    <Content Include="Image\ChapterImage\image4.jpg" />
+    <Content Include="Image\ChapterImage\image5.jpg" />
+    <Content Include="Image\ChapterImage\image6.jpg" />
+    <Content Include="Image\ChapterImage\image7.jpg" />
+    <Content Include="Image\ChapterImage\image8.jpg" />
+    <Content Include="Image\ChapterImage\image9.jpg" />
     <Content Include="Image\Cover\story1.jpg" />
+    <Content Include="Image\Cover\story10.jpg" />
+    <Content Include="Image\Cover\story11.jpg" />
+    <Content Include="Image\Cover\story12.jpg" />
+    <Content Include="Image\Cover\story13.jpg" />
+    <Content Include="Image\Cover\story14.jpg" />
+    <Content Include="Image\Cover\story15.jpg" />
+    <Content Include="Image\Cover\story16.jpg" />
+    <Content Include="Image\Cover\story17.jpg" />
+    <Content Include="Image\Cover\story18.jpg" />
+    <Content Include="Image\Cover\story19.jpg" />
+    <Content Include="Image\Cover\story2.jpg" />
+    <Content Include="Image\Cover\story20.jpg" />
+    <Content Include="Image\Cover\story21.jpg" />
+    <Content Include="Image\Cover\story22.jpg" />
+    <Content Include="Image\Cover\story3.jpg" />
+    <Content Include="Image\Cover\story4.jpg" />
+    <Content Include="Image\Cover\story5.jpg" />
+    <Content Include="Image\Cover\story6.jpg" />
+    <Content Include="Image\Cover\story7.jpg" />
+    <Content Include="Image\Cover\story8.jpg" />
+    <Content Include="Image\Cover\story9.jpg" />
     <Content Include="Image\Icon\home.png" />
+    <Content Include="Image\Icon\home2.png" />
     <Content Include="Image\Icon\light.png" />
+    <Content Include="Image\Icon\list.png" />
     <Content Include="Image\Icon\Logo.png" />
     <Content Include="Image\Icon\messenger.png" />
     <Content Include="Image\Icon\search.png" />
@@ -216,6 +260,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
+    <Content Include="Views\Story\Detail.cshtml" />
+    <Content Include="Views\Shared\RankingPartial.cshtml" />
+    <Content Include="Views\Read\Chapter.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

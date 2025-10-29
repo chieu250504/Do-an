@@ -1,0 +1,159 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<Nettruyen.Controllers.StoryDisplayViewModel>
+
+@{
+    ViewBag.Title = "Tìm kiếm truyện";
+}
+
+<div class="content">
+
+    <section class="main-content">
+        <h2>📚 Truyện mới cập nhật</h2>
+        <div class="story-grid">
+            @foreach (var story in Model)
+            {
+                <div class="story-card">
+                    <a href="@Url.Action("Detail", "Story", new { id = story.StoryID })">
+                        <div class="story-thumb">
+                            <img src="@Url.Content(story.CoverImage)" alt="@story.Title" />
+                            <div class="overlay"></div>
+                            <div class="views">👁️ @story.Views lượt xem</div>
+                        </div>
+                    </a>
+                    <h3>@story.Title</h3>
+
+                    <div class="chapters">
+                        @foreach (var c in story.LatestChapters)
+                        {
+                            <p>
+                                Chapter   @c.ChapterNumber
+                                <span>@Nettruyen.Controllers.TimeHelper.GetRelativeTime(c.PublishedAt)</span>
+                            </p>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="pagination">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+        </div>
+    </section>
+
+
+    <aside class="ranking-sidebar">
+
+        <div class="ranking-section">
+            <h3 class="ranking-title">Bảng xếp hạng</h3>
+
+            <div class="ranking-tabs">
+                <label>
+                    <input type="radio" name="rankingFilter" value="day" checked>
+                    <span>Ngày</span>
+                </label>
+                <label>
+                    <input type="radio" name="rankingFilter" value="week">
+                    <span>Tuần</span>
+                </label>
+                <label>
+                    <input type="radio" name="rankingFilter" value="month">
+                    <span>Tháng</span>
+                </label>
+            </div>
+
+            <ul class="ranking-list ranking-day active">
+                @{
+                    int rank = 1;
+                }
+                @foreach (var story in Model)
+                {
+                    var latestChapter = story.LatestChapters.FirstOrDefault();
+                    <li class="ranking-item">
+                        <div class="ranking-rank @(rank == 1 ? "rank-1" : rank == 2 ? "rank-2" : rank == 3 ? "rank-3" : "")">
+                            @rank
+                        </div>
+                        <a href="@Url.Action("Detail", "Story", new { id = story.StoryID })" class="ranking-link">
+                            <img src="@Url.Content(story.CoverImage)" alt="@story.Title" class="ranking-thumb" />
+                            <div class="ranking-info">
+                                <h4 class="ranking-name">@story.Title</h4>
+                                @if (latestChapter != null)
+                                {
+                                    <p class="ranking-chapter">
+                                        Chapter @latestChapter.ChapterNumber 👁️ @story.Views
+                                    </p>
+                                }
+                            </div>
+                        </a>
+                    </li>
+                    rank++;
+                }
+            </ul>
+            <!-- BXH TUẦN -->
+            <ul class="ranking-list ranking-week" style="display: none;">
+                @{
+                    int rank1 = 1;
+                }
+                @foreach (var story in Model)
+                {
+                    var latestChapter = story.LatestChapters.FirstOrDefault();
+                    <li class="ranking-item">
+                        <div class="ranking-rank @(rank1 == 1 ? "rank-1" : rank1 == 2 ? "rank-2" : rank1 == 3 ? "rank-3" : "")">
+                            @rank1
+                        </div>
+                        <a href="@Url.Action("Detail", "Story", new { id = story.StoryID })" class="ranking-link">
+                            <img src="@Url.Content(story.CoverImage)" alt="@story.Title" class="ranking-thumb" />
+                            <div class="ranking-info">
+                                <h4 class="ranking-name">@story.Title</h4>
+                                @if (latestChapter != null)
+                                {
+                                    <p class="ranking-chapter">
+                                        Chapter @latestChapter.ChapterNumber 👁️ @story.Views
+                                    </p>
+                                }
+                            </div>
+                        </a>
+                    </li>
+                    rank1++;
+                }
+            </ul>
+
+            <!-- BXH THÁNG -->
+            <ul class="ranking-list ranking-month" style="display: none;">
+                @{
+                    int rank2 = 1;
+                }
+                @foreach (var story in Model)
+                {
+                    var latestChapter = story.LatestChapters.FirstOrDefault();
+                    <li class="ranking-item">
+                        <div class="ranking-rank @(rank2 == 1 ? "rank-1" : rank2 == 2 ? "rank-2" : rank2 == 3 ? "rank-3" : "")">
+                            @rank2
+                        </div>
+                        <a href="@Url.Action("Detail", "Story", new { id = story.StoryID })" class="ranking-link">
+                            <img src="@Url.Content(story.CoverImage)" alt="@story.Title" class="ranking-thumb" />
+                            <div class="ranking-info">
+                                <h4 class="ranking-name">@story.Title</h4>
+                                @if (latestChapter != null)
+                                {
+                                    <p class="ranking-chapter">
+                                        Chapter @latestChapter.ChapterNumber 👁️ @story.Views
+                                    </p>
+                                }
+                            </div>
+                        </a>
+                    </li>
+                    rank2++;
+                }
+            </ul>
+        </div>
+    </aside>
+
+</div>
+<script>
+    document.getElementById('searchButton').addEventListener('click', function () {
+        const keyword = document.getElementById('searchInput').value.trim();
+        if (keyword) {
+            window.location.href = '/Search?keyword=' + encodeURIComponent(keyword);
+        }
+    });
+</script>

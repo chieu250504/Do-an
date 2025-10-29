@@ -1,0 +1,77 @@
+﻿@model Nettruyen.Models.Chapter
+@using System.Linq
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    
+    var allChapters = Model.Story.Chapters.OrderBy(c => c.ChapterNumber).ToList();
+    var prevChapter = allChapters.FirstOrDefault(c => c.ChapterNumber == Model.ChapterNumber - 1);
+    var nextChapter = allChapters.FirstOrDefault(c => c.ChapterNumber == Model.ChapterNumber + 1);
+}
+
+<div class="reading-page" style="text-align:center;">
+
+    <h2>@Model.Story.Title</h2>
+    <h4>Chapter @Model.ChapterNumber - @Model.ChapterTitle</h4>
+
+    <hr />
+
+    
+    <div class="chapter-nav">
+
+        
+        <a href="@Url.Action("Index", "Home")" style="background:none">
+            <img src="~/Image/Icon/home2.png" alt="Home" style="height:30px" />
+        </a>
+
+        
+        <a href="@Url.Action("Detail", "Story", new { id = Model.StoryID })" style="background:none">
+            <img src="~/Image/Icon/list.png" alt="List" />
+        </a>
+
+        
+        <a href="@(prevChapter != null ? Url.Action("Chapter", "Read", new { id = prevChapter.ChapterID }) : "#")"
+           style="opacity:@(prevChapter != null ? "1" : "0.4"); pointer-events:@(prevChapter != null ? "auto" : "none"); ">
+            ⬅
+        </a>
+
+        
+        <select onchange="location = this.value;">
+            @foreach (var c in allChapters)
+            {
+                <option value="@Url.Action("Chapter", "Read", new { id = c.ChapterID })"
+                        @(c.ChapterID == Model.ChapterID ? "selected" : "")>
+                    Chapter @c.ChapterNumber
+                </option>
+            }
+        </select>
+
+        
+        <a href="@(nextChapter != null ? Url.Action("Chapter", "Read", new { id = nextChapter.ChapterID }) : "#")"
+           style="opacity:@(nextChapter != null ? "1" : "0.4"); pointer-events:@(nextChapter != null ? "auto" : "none");">
+            ➡
+        </a>
+
+    </div>
+    <div class="chapter-images-container">
+       
+        @if (Model.ChapterImages != null && Model.ChapterImages.Any())
+        {
+
+            foreach (var img in Model.ChapterImages.OrderBy(i => i.ImageID))
+            {
+                
+                    <img src="@Url.Content("~/Image/ChapterImage/" + img.ImageURL)"
+                         alt="Page @img.ImageID"
+                         style="max-width:100%; height:auto;" />
+                
+            }
+        }
+        else
+        {
+            <p>Không có hình ảnh cho chapter này.</p>
+        }
+
+        <hr />
+
+    </div>

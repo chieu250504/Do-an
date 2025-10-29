@@ -1,0 +1,191 @@
+﻿
+@{
+    // Thiết lập Title và bỏ Layout (vì đây là trang đăng ký độc lập)
+    ViewBag.Title = "ĐĂNG KÝ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <!-- Tải Tailwind CSS cho kiểu dáng responsive và hiện đại -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tải Font Awesome cho icon Google -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- KHỐI CSS MỚI ĐÃ ĐƯỢC FIX LỖI -->
+    <style>
+        /* Thiết lập font Inter làm mặc định */
+        @@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        :root {
+            /* Màu sắc đồng bộ với giao diện Đăng nhập */
+            --primary-color: #c0392b; /* Màu đỏ gạch đậm hơn, gần với ảnh Đăng nhập */
+            --accent-color: #f1c40f; /* Màu vàng đậm hơn, gần với ảnh Đăng nhập */
+            --dark-bg: #2d3436;
+            --card-bg: #3c4043;
+            --text-color: #e6e6e6;
+            --input-bg: #5a5f63;
+        }
+
+        
+
+        /* Thẻ form chính */
+        .registration-card {
+            background-color: var(--card-bg);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Input fields */
+        .input-field {
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            border: 1px solid #666;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+            .input-field:focus {
+                border-color: var(--accent-color);
+                box-shadow: 0 0 0 2px rgba(241, 196, 15, 0.5); /* Dùng màu vàng đậm hơn */
+                outline: none;
+            }
+
+            .input-field::placeholder {
+                color: #b0b0b0;
+            }
+
+        /* Cấu trúc options/links */
+        .options-links {
+            display: flex;
+            justify-content: flex-end; /* Chỉ cần căn phải cho link Đăng nhập */
+            margin-bottom: 20px;
+        }
+
+        /* Nút Đăng Ký chính (Màu vàng) - ĐÃ LOẠI BỎ MARGIN-TOP */
+        .btn-register {
+            background-color: var(--accent-color);
+            color: #333;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            /* margin-top: 0px; đã được loại bỏ */
+        }
+
+            .btn-register:hover {
+                background-color: #e9b900; /* Vàng hover đậm hơn */
+            }
+
+            .btn-register:active {
+                transform: translateY(1px);
+            }
+
+        /* Nút Đăng Ký bằng Google (Màu đỏ gạch) */
+        .btn-google-register {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .btn-google-register:hover {
+                background-color: #a43125; /* Đỏ gạch hover đậm hơn */
+            }
+
+        .g-icon-wrapper {
+            background-color: white;
+            color: var(--primary-color);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+        }
+
+        /* Điểm nhấn tiêu đề */
+        .title-line {
+            width: 60px;
+            height: 3px;
+            /* Giữ màu hồng đậm/mận như trong ảnh gốc của bạn (nếu muốn)
+               Hoặc đổi sang màu accent: background-color: var(--accent-color); */
+            background-color: #f06292;
+            border-radius: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        /* Link đăng nhập */
+        .login-link {
+            color: #f06292; /* Dùng màu hồng cho link như trong ảnh Đăng ký cũ */
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 14px;
+        }
+
+            .login-link:hover {
+                color: #c03a6a;
+                text-decoration: underline;
+            }
+    </style>
+</head>
+
+    <div class="bg-gray-800 p-8 rounded-xl w-full max-w-sm text-white" style="margin-left: auto; margin-right: auto; margin-top: 50px; margin-bottom: 30px;">
+        <h2 class="text-3xl font-bold mb-2">ĐĂNG KÝ</h2>
+        <div class="w-16 h-1 bg-pink-500 mb-6"></div>
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="text-red-400 mb-4">@ViewBag.Error</div>
+        }
+
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="mb-4">
+                <label for="Username" class="block text-sm mb-1">Tên đăng nhập</label>
+                <input type="text" name="Username" class="w-full p-3 rounded bg-gray-700" placeholder="Tên đăng nhập" />
+            </div>
+
+            <div class="mb-4">
+                <label for="Email" class="block text-sm mb-1">Email</label>
+                <input type="email" name="Email" class="w-full p-3 rounded bg-gray-700" placeholder="Email" />
+            </div>
+
+            <div class="mb-4">
+                <label for="Password" class="block text-sm mb-1">Mật khẩu</label>
+                <input type="password" name="Password" class="w-full p-3 rounded bg-gray-700" placeholder="Mật khẩu" />
+            </div>
+
+            <div class="mb-4">
+                <label for="ConfirmPassword" class="block text-sm mb-1">Xác nhận mật khẩu</label>
+                <input type="password" name="ConfirmPassword" class="w-full p-3 rounded bg-gray-700" placeholder="Xác nhận mật khẩu" />
+            </div>
+
+            <div class="mb-4 flex justify-end">
+                <a href="@Url.Action("Login", "Account")" class="text-pink-400 text-sm hover:underline">Đăng nhập</a>
+            </div>
+
+            <button type="submit" class="bg-yellow-500 text-gray-900 font-bold py-2 px-4 rounded w-full hover:bg-yellow-400">
+                Đăng ký
+            </button>
+        }
+    </div>
+
+</html>

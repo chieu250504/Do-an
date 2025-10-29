@@ -1,4 +1,20 @@
-﻿<!DOCTYPE html>
+﻿@{
+    // Thiết lập Layout = null vì đây là file Layout chính
+    Layout = null;
+
+    // Lấy thông tin từ Session an toàn hơn
+    var currentUserID = Session["UserID"]?.ToString();
+
+    // Sử dụng 'as string' để đảm bảo nó là chuỗi và tránh lỗi NullReference
+    var currentFullName = Session["Username"] as string;
+
+    // Nếu Session["FullName"] bị null hoặc rỗng, đặt nó về null để logic kiểm tra dễ dàng hơn
+    if (string.IsNullOrEmpty(currentFullName))
+    {
+        currentFullName = null;
+    }
+}
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8" />
@@ -7,19 +23,22 @@
     <script src="~/Content/Script.js" defer></script>
 </head>
 <body>
-    
+
     <header class="main-header">
         <div class="header-container">
-            <a href="#" class="logo-link">
+            <a href="@Url.Action("Index", "Home")" class="logo-link">
                 <img src="~/Image/Icon/Logo.png" alt="NetTruyen Logo" class="logo-img">
             </a>
 
             <div class="search-bar-wrapper">
-                <input type="text" placeholder="Tìm truyện..." class="search-input">
-                <button class="search-button" aria-label="Tìm kiếm">
+                <input id="searchInput" type="text" placeholder="Tìm truyện..." class="search-input">
+                <button id="searchButton" class="search-button" aria-label="Tìm kiếm">
                     <img src="~/Image/Icon/search.png" alt="Icon tìm kiếm" class="header-icon-img">
                 </button>
             </div>
+            <ul id="searchResults"
+                style="list-style:none;padding:0;margin-top:10px;text-align:left;max-height:400px;overflow-y:auto;border:1px solid #ddd;border-radius:5px;display:none;">
+            </ul>
 
             <div class="header-icons">
                 <a href="#" class="icon-link" aria-label="đèn" id="theme-toggle">
@@ -28,16 +47,51 @@
                 <a href="#" class="icon-link" aria-label="Tin nhắn">
                     <img src="~/Image/Icon/messenger.png" alt="Icon Tin nhắn" class="header-icon-img">
                 </a>
+                
                 <div class="account-dropdown">
+                    @* Nút trigger dropdown *@
                     <a href="#" class="icon-link" aria-label="Tài khoản">
                         <img src="~/Image/Icon/user.png" alt="Icon Tài khoản" class="header-icon-img user-icon">
-                        <span>Tài khoản</span>
+
+                        @* HIỂN THỊ TÊN HOẶC CHỮ 'Tài khoản' *@
+                        @if (!string.IsNullOrEmpty(currentFullName))
+                        {
+                            <span class="user-display-name">@currentFullName</span>
+                        }
+                        else
+                        {
+                            <span class="user-display-name">Tài khoản</span>
+                        }
                     </a>
+
                     <div class="dropdown-menu">
-                        <a href="#"><img src="~/Image/Icon/user.png" alt="Icon Tài khoản" class="header-icon-img user-icon">Đăng nhập</a>
-                        <a href="#"><img src="~/Image/Icon/user.png" alt="Icon Tài khoản" class="header-icon-img user-icon">Đăng ký</a>
+                        @* NỘI DUNG MENU THẢ XUỐNG DỰA TRÊN TRẠNG THÁI ĐĂNG NHẬP *@
+                        @if (!string.IsNullOrEmpty(currentUserID))
+                        {
+                            @* ĐÃ ĐĂNG NHẬP: Hiển thị Profile, Truyện theo dõi, Đăng xuất *@
+                            <a href="#">
+                                <img src="~/Image/Icon/user.png" alt="Hồ sơ" class="header-icon-img user-icon">Hồ sơ
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-heart header-icon-img user-icon"></i>Truyện theo dõi
+                            </a>
+                            <a href="@Url.Action("Logout", "Account")">
+                                <img src="~/Image/Icon/logout.png" alt="Đăng xuất" class="header-icon-img user-icon">Đăng xuất
+                            </a>
+                        }
+                        else
+                        {
+                            @* CHƯA ĐĂNG NHẬP: Hiển thị Đăng nhập và Đăng ký *@
+                            <a href="@Url.Action("Login", "Account")">
+                                <img src="~/Image/Icon/user.png" alt="Icon Tài khoản" class="header-icon-img user-icon">Đăng nhập
+                            </a>
+                            <a href="@Url.Action("Register", "Account")">
+                                <img src="~/Image/Icon/user.png" alt="Icon Tài khoản" class="header-icon-img user-icon">Đăng ký
+                            </a>
+                        }
                     </div>
                 </div>
+                <!-- END: Khối Tài khoản/Đăng nhập -->
             </div>
         </div>
     </header>
@@ -79,7 +133,7 @@
         </div>
     </nav>
 
-    
+
     <div class="main-container">
         @RenderBody()
     </div>
@@ -131,5 +185,52 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const $input = $('#searchInput');
+        const $results = $('#searchResults');
+        let timeout = null;
+
+        $input.on('input', function () {
+            const keyword = $(this).val().trim();
+
+            clearTimeout(timeout);
+
+            if (!keyword) {
+                $results.hide().empty();
+                return;
+            }
+
+            timeout = setTimeout(() => {
+                $.getJSON('/Search/LiveSearch', { keyword }, function (data) {
+                    $results.empty();
+
+                    if (data.results.length === 0) {
+                        $results.append('<li style="padding:10px;">Không tìm thấy kết quả</li>').show();
+                        return;
+                    }
+
+                    data.results.forEach(story => {
+                        const item = `
+                            <li style="display:flex;align-items:center;gap:10px;padding:10px;border-bottom:1px solid #eee;">
+                                <a href="/Story/Detail/${story.StoryID}"
+                                   style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#333;">
+                                    <img src="${story.CoverImage}" alt="${story.Title}"
+                                         style="width:50px;height:70px;object-fit:cover;border-radius:4px;">
+                                    <div>
+                                        <h4 style="margin:0;font-size:14px;">${story.Title}</h4>
+                                        <small style="color:#777;">Tác giả: ${story.Author}</small>
+                                    </div>
+                                </a>
+                            </li>`;
+                        $results.append(item);
+                    });
+
+                    $results.show();
+                });
+            }, 300); // đợi 0.3s sau khi ngừng gõ
+        });
+    </script>
+
 </body>
 </html>

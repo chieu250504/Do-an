@@ -3,25 +3,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const topList = document.getElementById("topList");
     const items = Array.from(topList.children);
     const visibleCount = 5;
-    const itemWidth = topList.children[0].offsetWidth + 18; 
+    const itemWidth = topList.children[0].offsetWidth + 18;
     let currentIndex = 0;
     let isAnimating = false;
     let autoSlideInterval;
+    let position = -visibleCount * itemWidth;
 
-
+    // Clone phần tử 2 đầu
     for (let i = 0; i < visibleCount; i++) {
-        topList.appendChild(items[i].cloneNode(true)); 
-        topList.insertBefore(items[items.length - 1 - i].cloneNode(true), topList.firstChild); 
+        topList.appendChild(items[i].cloneNode(true));
+        topList.insertBefore(items[items.length - 1 - i].cloneNode(true), topList.firstChild);
     }
 
-
     const totalItems = topList.children.length;
-
     topList.style.transform = `translateX(${position}px)`;
-
-
-    topList.style.transition = "transform 0.5s ease-in-out";
-
+    topList.style.transition = "transform 0.4s ease-in-out";
 
     function moveCarousel(direction) {
         if (isAnimating) return;
@@ -36,39 +32,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         topList.style.transform = `translateX(${position}px)`;
-
-
-        topList.addEventListener(
-            "transitionend",
-            () => {
-                if (currentIndex >= items.length) {
-                    currentIndex = 0;
-                    position = -visibleCount * itemWidth;
-                    topList.style.transition = "none";
-                    topList.style.transform = `translateX(${position}px)`;
-                    setTimeout(() => (topList.style.transition = "transform 0.5s ease-in-out"), 20);
-                } else if (currentIndex < 0) {
-                    currentIndex = items.length - 1;
-                    position = -(visibleCount + currentIndex - items.length + 1) * itemWidth;
-                    topList.style.transition = "none";
-                    topList.style.transform = `translateX(${position}px)`;
-                    setTimeout(() => (topList.style.transition = "transform 0.5s ease-in-out"), 20);
-                }
-                isAnimating = false;
-            },
-            { once: true }
-        );
     }
 
+    // 👉 Chỉ add transitionend 1 lần duy nhất
+    topList.addEventListener("transitionend", () => {
+        if (currentIndex >= items.length) {
+            currentIndex = 0;
+            position = -visibleCount * itemWidth;
+            topList.style.transition = "none";
+            topList.style.transform = `translateX(${position}px)`;
+            setTimeout(() => (topList.style.transition = "transform 0.4s ease-in-out"), 20);
+        } else if (currentIndex < 0) {
+            currentIndex = items.length - 1;
+            position = -((visibleCount + items.length - 1) * itemWidth);
+            topList.style.transition = "none";
+            topList.style.transform = `translateX(${position}px)`;
+            setTimeout(() => (topList.style.transition = "transform 0.4s ease-in-out"), 20);
+        }
+        isAnimating = false;
+    });
 
     document.querySelector(".right-btn").addEventListener("click", () => moveCarousel("right"));
     document.querySelector(".left-btn").addEventListener("click", () => moveCarousel("left"));
 
-
     function startAutoSlide() {
-        autoSlideInterval = setInterval(() => moveCarousel("right"), 3000);
+        autoSlideInterval = setInterval(() => moveCarousel("right"), 4000);
     }
-
     function stopAutoSlide() {
         clearInterval(autoSlideInterval);
     }
@@ -79,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     carouselContainer.addEventListener("mouseenter", stopAutoSlide);
     carouselContainer.addEventListener("mouseleave", startAutoSlide);
 });
+
 //BXH
 document.querySelectorAll('input[name="rankingFilter"]').forEach(radio => {
     radio.addEventListener('change', e => {
@@ -116,3 +106,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+// tim kiem
+document.getElementById('searchButton').addEventListener('click', function () {
+    const keyword = document.getElementById('searchInput').value.trim();
+    if (keyword) {
+        window.location.href = '/Search?keyword=' + encodeURIComponent(keyword);
+    }
+});
+

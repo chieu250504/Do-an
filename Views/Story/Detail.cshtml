@@ -1,0 +1,74 @@
+﻿@using System.Linq
+@{
+    var topStories = ViewBag.TopStories as List<Nettruyen.Controllers.StoryDisplayViewModel>
+                     ?? new List<Nettruyen.Controllers.StoryDisplayViewModel>();
+}
+
+@{
+    ViewBag.Title = Model.Title;
+    var chapters = ViewBag.Chapters as List<Nettruyen.Models.Chapter>;
+}
+
+<div class="main-content" style="color:white">
+    <div class="story-header">
+        <img src="@Url.Content(@Model.CoverImage)" alt="@Model.Title" />
+        <div class="story-info">
+            <h1>@Model.Title</h1>
+            <p><strong>Tác giả:</strong> @Model.Author</p>
+            <p><strong>Thể loại:</strong> @Model.Type.TypeName</p>
+            <p><strong>Tình trạng:</strong> @Model.Status</p>
+            <p><strong>Mô tả:</strong> @Model.Description</p>
+            <p><strong>Đánh giá:</strong> @Model.Ranking/10</p>
+
+            <div class="rating-stars">
+                @{
+                    double rating = Model.Ranking;
+                    int fullStars = (int)Math.Floor(rating);
+                    bool hasHalfStar = (rating - fullStars) >= 0.5;
+                }
+
+                @for (int i = 1; i <= 5; i++)
+                {
+                    if (i <= fullStars)
+                    {
+                        <span class="star full">★</span>
+                    }
+                    else if (i == fullStars + 1 && hasHalfStar)
+                    {
+                        <span class="star half">★</span>
+                    }
+                    else
+                    {
+                        <span class="star empty">★</span>
+                    }
+                }
+            </div>
+
+            <!-- 🧡 Các nút thao tác -->
+            <div class="story-actions">
+                <button class="btn-follow">Theo dõi</button>
+
+                <div class="read-buttons">
+                    <a href="@Url.Action("Chapter", "Read", new { id = chapters.FirstOrDefault()?.ChapterID })" class="btn-read-start">Đọc từ đầu</a>
+                    <a href="@Url.Action("Chapter", "Read", new { id = chapters.LastOrDefault()?.ChapterID })" class="btn-read-latest">Đọc mới nhất</a>
+                    <a href="@Url.Action("Chapter", "Read", new { id = chapters.FirstOrDefault()?.ChapterID })" class="btn-read-continue">Đọc tiếp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <h2>📖 Danh sách chương</h2>
+    <ul class="chapter-list">
+        @foreach (var chap in chapters)
+        {
+            <li>
+                <a href="@Url.Action("Chapter", "Read", new { id = chap.ChapterID })">
+                    Chapter @chap.ChapterNumber - @chap.ChapterTitle
+                </a>
+                <span class="date">@chap.PublishedAt.ToString("dd/MM/yyyy")</span>
+            </li>
+        }
+    </ul>
+</div>

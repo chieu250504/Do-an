@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Nettruyen.Controllers.StoryDisplayViewModel>
+@using System.Linq
+
+<aside class="ranking-sidebar">
+    <div class="ranking-section">
+        <h3 class="ranking-title">📈 Bảng xếp hạng</h3>
+
+        <div class="ranking-tabs">
+            <label><input type="radio" name="rankingFilter" value="day" checked><span>Ngày</span></label>
+            <label><input type="radio" name="rankingFilter" value="week"><span>Tuần</span></label>
+            <label><input type="radio" name="rankingFilter" value="month"><span>Tháng</span></label>
+        </div>
+
+        <!-- BXH NGÀY -->
+        <ul class="ranking-list ranking-day active">
+            @{
+                int rank = 1;
+            }
+            @foreach (var story in Model)
+            {
+                var latestChapter = story.LatestChapters?.FirstOrDefault();
+                <li class="ranking-item">
+                    <div class="ranking-rank @(rank == 1 ? "rank-1" : rank == 2 ? "rank-2" : rank == 3 ? "rank-3" : "")">@rank</div>
+                    <a href="@Url.Action("Detail", "Story", new { id = story.StoryID })" class="ranking-link">
+                        <img src="@Url.Content(story.CoverImage)" alt="@story.Title" class="ranking-thumb" />
+                        <div class="ranking-info">
+                            <h4 class="ranking-name">@story.Title</h4>
+                            @if (latestChapter != null)
+                            {
+                                <p class="ranking-chapter">
+                                    Chapter @latestChapter.ChapterNumber 👁️ @story.Views
+                                </p>
+                            }
+                        </div>
+                    </a>
+                </li>
+                rank++;
+            }
+        </ul>
+    </div>
+</aside>

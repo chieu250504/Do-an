@@ -1,61 +1,101 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\",
+  "WorkspaceRootPath": "C:\\DoAn\\Nettruyen\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|c:\\\u0111\u1ED3 \u00E1n\\nettruyen\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|c:\\doan\\nettruyen\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|c:\\doan\\nettruyen\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\models\\type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|c:\\doan\\nettruyen\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\models\\story.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\story.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|c:\\doan\\nettruyen\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\models\\chapterimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\chapterimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|c:\\doan\\nettruyen\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\models\\chapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\chapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\content\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\content\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:content\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\content\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:content\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\models\\chaptertext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\chaptertext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\migrations\\202510161437385_seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\views\\read\\chapter.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:views\\read\\chapter.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\controllers\\readcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:controllers\\readcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|c:\\doan\\nettruyen\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\controllers\\storycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:controllers\\storycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\content\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:content\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\models\\story.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\story.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\models\\chapterimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\chapterimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\views\\story\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:views\\story\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\models\\chapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\chapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\migrations\\202510161437385_seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:migrations\\202510161437385_seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\migrations\\202510161443293_addviewstostory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|C:\\DoAn\\Nettruyen\\migrations\\202510161443293_addviewstostory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F0FB356-0836-4E23-AA09-EE329CEA2A35}|Nettruyen.csproj|solutionrelative:migrations\\202510161443293_addviewstostory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -66,45 +106,107 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-29T07:25:44.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAmwKwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-29T07:25:01.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T07:23:22.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T14:44:54.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Style.css",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Content\\Style.css",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Content\\Style.css",
               "RelativeDocumentMoniker": "Content\\Style.css",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Content\\Style.css",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Content\\Style.css",
               "RelativeToolTip": "Content\\Style.css",
-              "ViewState": "AgIAAOUCAAAAAAAAAAAYwA0DAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAuwJAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-10-16T14:53:40.341Z",
-              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Type.cs",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\Type.cs",
-              "RelativeDocumentMoniker": "Models\\Type.cs",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\Type.cs",
-              "RelativeToolTip": "Models\\Type.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "ReadController.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Controllers\\ReadController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReadController.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Controllers\\ReadController.cs",
+              "RelativeToolTip": "Controllers\\ReadController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T07:47:55.521Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-10-21T15:33:27.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
+              "Title": "StoryController.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Controllers\\StoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StoryController.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Controllers\\StoryController.cs",
+              "RelativeToolTip": "Controllers\\StoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T08:53:14.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-18T13:01:11.881Z",
               "EditorCaption": ""
@@ -112,87 +214,160 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Script.js",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Content\\Script.js",
-              "RelativeDocumentMoniker": "Content\\Script.js",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Content\\Script.js",
-              "RelativeToolTip": "Content\\Script.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-18T10:26:10.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ChapterImage.cs",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\ChapterImage.cs",
-              "RelativeDocumentMoniker": "Models\\ChapterImage.cs",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\ChapterImage.cs",
-              "RelativeToolTip": "Models\\ChapterImage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T08:12:12.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ChapterText.cs",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\ChapterText.cs",
-              "RelativeDocumentMoniker": "Models\\ChapterText.cs",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\ChapterText.cs",
-              "RelativeToolTip": "Models\\ChapterText.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T08:12:11.067Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Chapter.cs",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\Chapter.cs",
-              "RelativeDocumentMoniker": "Models\\Chapter.cs",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\Chapter.cs",
-              "RelativeToolTip": "Models\\Chapter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T07:56:27.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAFMAAAAJAAAAAAAAAA==",
+              "Title": "Chapter.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Views\\Read\\Chapter.cshtml",
+              "RelativeDocumentMoniker": "Views\\Read\\Chapter.cshtml",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Views\\Read\\Chapter.cshtml",
+              "RelativeToolTip": "Views\\Read\\Chapter.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-16T14:44:54.086Z",
+              "WhenOpened": "2025-10-21T15:33:57.707Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Controllers\\HomeController.cs*",
-              "RelativeToolTip": "Controllers\\HomeController.cs*",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAGAAAAAnAAAAAAAAAA==",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwC4AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T14:44:26.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "Views\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-29T07:26:33.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Models\\Comment.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Models\\Comment.cs",
+              "RelativeToolTip": "Models\\Comment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T06:37:54.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwCIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T07:21:07.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "Script.js",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Content\\Script.js",
+              "RelativeDocumentMoniker": "Content\\Script.js",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Content\\Script.js",
+              "RelativeToolTip": "Content\\Script.js",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAQwHQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-18T10:26:10.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ChapterImage.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Models\\ChapterImage.cs",
+              "RelativeDocumentMoniker": "Models\\ChapterImage.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Models\\ChapterImage.cs",
+              "RelativeToolTip": "Models\\ChapterImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T08:12:12.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Story.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Models\\Story.cs",
+              "RelativeDocumentMoniker": "Models\\Story.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Models\\Story.cs",
+              "RelativeToolTip": "Models\\Story.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:43:04.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Views\\Story\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Views\\Story\\Detail.cshtml",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Views\\Story\\Detail.cshtml",
+              "RelativeToolTip": "Views\\Story\\Detail.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-21T09:21:57.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Chapter.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Models\\Chapter.cs",
+              "RelativeDocumentMoniker": "Models\\Chapter.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Models\\Chapter.cs",
+              "RelativeToolTip": "Models\\Chapter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T15:37:19.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Models\\Genre.cs",
+              "RelativeDocumentMoniker": "Models\\Genre.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Models\\Genre.cs",
+              "RelativeToolTip": "Models\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T09:23:12.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAABoAAAAAAAAAAAAmwD8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-10-19T15:24:28.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "202510161443293_AddViewsToStory.cs",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Migrations\\202510161443293_AddViewsToStory.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Migrations\\202510161443293_AddViewsToStory.cs",
               "RelativeDocumentMoniker": "Migrations\\202510161443293_AddViewsToStory.cs",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Migrations\\202510161443293_AddViewsToStory.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Migrations\\202510161443293_AddViewsToStory.cs",
               "RelativeToolTip": "Migrations\\202510161443293_AddViewsToStory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -200,37 +375,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Story.cs",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\Story.cs",
-              "RelativeDocumentMoniker": "Models\\Story.cs",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\Story.cs",
-              "RelativeToolTip": "Models\\Story.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T14:43:04.44Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 20,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\AppDbContext.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Models\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Models\\AppDbContext.cs",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Models\\AppDbContext.cs*",
-              "RelativeToolTip": "Models\\AppDbContext.cs*",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "Models\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T14:32:38.686Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T14:32:38.686Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "202510161437385_SeedData.cs",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Migrations\\202510161437385_SeedData.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Migrations\\202510161437385_SeedData.cs",
               "RelativeDocumentMoniker": "Migrations\\202510161437385_SeedData.cs",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Migrations\\202510161437385_SeedData.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Migrations\\202510161437385_SeedData.cs",
               "RelativeToolTip": "Migrations\\202510161437385_SeedData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -238,11 +399,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "Configuration.cs",
-              "DocumentMoniker": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Migrations\\Configuration.cs",
+              "DocumentMoniker": "C:\\DoAn\\Nettruyen\\Migrations\\Configuration.cs",
               "RelativeDocumentMoniker": "Migrations\\Configuration.cs",
-              "ToolTip": "C:\\\u0110\u1ED3 \u00E1n\\Nettruyen\\Migrations\\Configuration.cs",
+              "ToolTip": "C:\\DoAn\\Nettruyen\\Migrations\\Configuration.cs",
               "RelativeToolTip": "Migrations\\Configuration.cs",
               "ViewState": "AgIAAHUAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
